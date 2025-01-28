@@ -1,4 +1,3 @@
-#include <Geode/Geode.hpp>
 #include <Geode/modify/CustomSongLayer.hpp>
 
 using namespace geode::prelude;
@@ -9,7 +8,7 @@ class $modify(CustomSongLayer) {
 		csw->m_hasSFX = 0;
 
 		//removes this info button on the up-right corner. Also, why tf this is the only button without a tag????????????
-		static_cast<CCNode*>(csw->getChildByID("buttons-menu")->getChildren()->objectAtIndex(7))->setVisible(0);
+		static_cast<CCNode*>(csw->getChildByID("buttons-menu")->getChildren()->objectAtIndex(7))->setVisible(false);
 		CustomSongLayer::onSearch(sender);
 	}
 
